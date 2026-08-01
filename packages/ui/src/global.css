@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@source "./";
+@source "./componentsField";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+	--current: currentColor;
+	--bp-c-transparent: transparent;
+	--bp-c-primary: oklch(0.59 0.2 277.12 / 1);
+	--bp-c-tertiary: oklch(0.58 0.14 55.28 / 1);
+	--bp-c-secondary: oklch(0.21 0.04 265.75 / 1);
+	--bp-bg-primary: oklch(0.19 0.04 265.49 / 1);
+	--bp-c-primary-focus: color-mix(in oklch, var(--bp-c-primary) 80%, black 5%);
+	--bp-c-neutral: oklch(0.98 0 247.84 / 1);
+	--bp-c-background: oklch(0.99 0.01 308.4 / 1);
+	--foreground: oklch(0.15 0 0);
+	--card: white;
+	--card-foreground: oklch(0.15 0 0);
+	--border: oklch(0.92 0 0);
+	--test: #b8beda;
+	--test2: #0f172a;
+}
+
+/* .dark {
+	--bp-c-background: oklch(0.19 0.04 267.2);
+	--foreground: white;
+	--bp-c-secondary: oklch(0.68 0.15 237.32 / 1);
+	--bp-c-neutral: oklch(0.1 0.05 240 / 1);
+
+	--card: oklch(0.23 0.04 267);
+	--card-foreground: white;
+
+	--border: oklch(0.3 0 0);
+} */
+.dark {
+	/* ===========================================
+	   Brand
+	=========================================== */
+
+	/* --primary-foreground: oklch(0.59 0.2 277.12); #6366F1 */
+	--primary-foreground: #3212a9; /* #3212a9 */
+	--primary: oklch(0.83 0.09 283.63 / 1);
+
+	--secondary: oklch(0.73 0.16 236.5); /* #0EA5E9 */
+	--secondary-foreground: oklch(0.15 0.02 236);
+
+	--tertiary: oklch(0.67 0.18 58); /* #B95F00 */
+	--tertiary-foreground: oklch(0.98 0.01 58);
+
+	/* ===========================================
+	   Backgrounds
+	=========================================== */
+
+	--background: oklch(0.18 0.03 260);
+	--foreground: oklch(0.96 0.02 260);
+
+	--surface: oklch(0.22 0.03 260);
+	--surface-hover: oklch(0.25 0.03 260);
+	--surface-active: oklch(0.29 0.03 260);
+
+	--card: oklch(0.22 0.03 260);
+	--card-hover: oklch(0.25 0.03 260);
+
+	/* ===========================================
+	   Text
+	=========================================== */
+
+	--text-primary: oklch(0.96 0.02 260);
+	--text-secondary: oklch(0.82 0.02 260);
+	--text-muted: oklch(0.66 0.02 260);
+	--text-disabled: oklch(0.5 0.02 260);
+	--text-inverse: oklch(0.18 0.03 260);
+	/* ===========================================
+	   Borders
+	=========================================== */
+
+	--border: oklch(0.31 0.03 260);
+	--border-hover: oklch(0.4 0.03 260);
+	--border-focus: var(--primary);
+
+	/* ===========================================
+	   Inputs
+	=========================================== */
+
+	--input: var(--surface);
+	--input-hover: var(--surface-hover);
+	--input-focus: var(--surface-active);
+
+	/* ===========================================
+	   States
+	=========================================== */
+
+	--success: oklch(0.73 0.18 145);
+	--warning: oklch(0.78 0.17 82);
+	--destructive: oklch(0.64 0.23 25);
+	--info: var(--secondary);
+
+	/* ===========================================
+	   Misc
+	=========================================== */
+
+	--ring: var(--primary);
+	--overlay: oklch(0 0 0 / 0.55);
+
+	/* ===========================================
+	   Chart (optional)
+	=========================================== */
+
+	--chart-1: var(--primary);
+	--chart-2: var(--secondary);
+	--chart-3: var(--tertiary);
+	--chart-4: oklch(0.73 0.18 145);
+	--chart-5: oklch(0.78 0.17 82);
+}
+
+@theme {
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-primary-focus: var(--bp-c-primary-focus);
+	--color-bg-primary: var(--bp-bg-primary);
+	--color-background: var(--bp-c-background);
+}
