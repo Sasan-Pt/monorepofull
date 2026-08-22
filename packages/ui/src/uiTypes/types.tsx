@@ -47,3 +47,11 @@ export interface ShadCheckBoxProps extends CheckboxPrimitive.Root.Props {
 	description?: string;
 	ref?: Ref<HTMLSpanElement> | undefined;
 }
+
+export interface SheetContentProps {
+	children: React.ReactNode;
+	title?: string;
+	description?: string;
+	open: boolean;
+	onOpenChange: () => void;
+}

@@ -4,7 +4,6 @@ import "./index.css";
 import { ThemeProvider } from "@repo/ui/theme/themeProvider";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { RouterProvider } from "react-router/dom";
-import App from "./App.tsx";
 import { queryClient } from "./api/queryConfig/queryClientProvider.tsx";
 
 import { router } from "./router/router";

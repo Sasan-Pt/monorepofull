@@ -2,11 +2,13 @@ import { queryOptions } from "@tanstack/react-query";
 import { getMedia } from "./api";
 import { mediaKeys } from "./keys";
 
-export const movieQueries = {
-	list: (filters: "movie" | "series") =>
+export const mediaQueries = {
+	list: () =>
 		queryOptions({
-			queryKey: mediaKeys.list(filters),
-			queryFn: () => getMedia(filters),
+			queryKey: mediaKeys.lists(),
+			queryFn: () => {
+				return getMedia("media/all");
+			},
 		}),
 
 	detail: (filters: "movie" | "series", id?: number) =>

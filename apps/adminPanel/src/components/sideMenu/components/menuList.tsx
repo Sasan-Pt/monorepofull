@@ -1,9 +1,10 @@
+import { SheetClose } from "@repo/ui/components/sheetsParts";
 import { Link, NavLink } from "react-router";
 
 const MenuList = () => {
 	return (
 		<div className="relative">
-			<ul className="flex flex-col pt-2">
+			<ul className="flex flex-col pt-2 text-center ">
 				<li>
 					<NavLink
 						to="/"

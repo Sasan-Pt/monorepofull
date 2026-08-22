@@ -32,7 +32,7 @@ const SelectField = (props: ShadSelectProps): React.ReactElement => {
 				>
 					<SelectValue />
 				</SelectTrigger>
-				<SelectContent>
+				<SelectContent alignItemWithTrigger={false}>
 					<SelectGroup>
 						{items.map((item) => (
 							<SelectItem key={item.value} value={item.value}>

@@ -1,6 +1,7 @@
 import { api } from "./createApi";
 
-export const getMedia = (genreType: string | number, params?: string) =>
-	api.get(`/{${genreType}`, { params });
+export const getMedia = async (url: string) => {
+	return await api.get(url);
+};
 
 export const createMedia = (data: any) => api.post("/medias/create", data);

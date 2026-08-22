@@ -1,7 +1,7 @@
 export const mediaKeys = {
 	all: ["media"] as const,
 
-	lists: () => [...mediaKeys.all, "list"] as const,
+	lists: () => [...mediaKeys.all, "all"] as const,
 
 	list: (type: "movie" | "series", filters?: string) =>
 		[...mediaKeys.lists(), type, filters] as const,
