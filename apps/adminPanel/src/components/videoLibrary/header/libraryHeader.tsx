@@ -1,5 +1,6 @@
 import { Button } from "@repo/ui/components/button";
 import { useQuery } from "@tanstack/react-query";
+import { Outlet } from "react-router";
 import { mediaQueries } from "@/api/media/api/queries";
 import { Tables } from "@/components/table/table";
 import CreateNewMedia from "../createNewMedia/createNewMedia";

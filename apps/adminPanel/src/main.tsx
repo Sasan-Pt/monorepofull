@@ -13,7 +13,7 @@ createRoot(document.getElementById("root")!).render(
 		<StrictMode>
 			<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 				<div
-					className="grid grid-cols-[4%_1fr_4%]   "
+					className="grid grid-cols-[4%_1fr_4%]"
 					style={{ direction: "rtl" }}
 				>
 					<RouterProvider router={router} />
