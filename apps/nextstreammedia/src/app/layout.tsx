@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@repo/ui/theme/";
+import { Figtree } from "next/font/google";
+
+const figtree = Figtree({
+	subsets: ["latin"],
+	display: "swap",
+	weight: ["400", "500", "600", "700", "900"],
+	variable: "--font-figtree",
+});
 
 export const metadata: Metadata = {
 	title: "NextStream Media",
@@ -13,9 +21,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="h-full">
-			<body className="flex min-h-full flex-col">
-				{" "}
+		<html
+			lang="en"
+			className={`${figtree.variable} h-full`}
+			suppressHydrationWarning
+		>
+			<body className="grid grid-cols-[4%_1fr_4%]">
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"

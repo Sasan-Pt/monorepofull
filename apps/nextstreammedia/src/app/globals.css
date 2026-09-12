@@ -4,8 +4,11 @@
 @source "../../../../packages/ui/src";
 @source "../../../../packages/api/src";
 
-body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+@layer base {
+	body {
+		font-family: var(--font-figtree);
+	}
+	:lang(en) {
+		font-family: var(--font-figtree);
+	}
 }
