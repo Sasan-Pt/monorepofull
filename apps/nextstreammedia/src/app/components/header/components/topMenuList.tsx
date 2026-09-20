@@ -10,7 +10,7 @@ const TopMenuList = () => {
 	];
 
 	return (
-		<ul className="items-center gap-4 md:flex hidden">
+		<ul className="items-center gap-4 md:flex hidden px-1">
 			<MenuList menuItems={menuList} />
 		</ul>
 	);

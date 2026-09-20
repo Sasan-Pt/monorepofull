@@ -1,36 +1,35 @@
 "use client";
-import { Menu, X } from "@repo/ui/icons/";
-import { AnimatePresence, motion } from "motion/react";
+import SideModal from "@repo/ui/componentsField/sideModal";
+import Link from "next/link";
 import { useState } from "react";
+
+const menuList = [
+	{ name: "Browse", link: "/" },
+	{ name: "Movies", link: "/Movies" },
+	{ name: "Series", link: "/Series" },
+	{ name: "Tags", link: "/Tags" },
+	{ name: "MyList", link: "/MyList" },
+];
 
 const MobileMenu = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
-		<AnimatePresence mode="wait">
-			{isOpen ? (
-				<motion.div
-					key="close"
-					initial={{ opacity: 0, rotate: -90 }}
-					animate={{ opacity: 1, rotate: 0 }}
-					exit={{ opacity: 0, rotate: 90 }}
-					transition={{ duration: 0.2 }}
-					onClick={() => setIsOpen(false)}
-				>
-					<X />
-				</motion.div>
-			) : (
-				<motion.div
-					key="menu"
-					initial={{ opacity: 0, rotate: 90 }}
-					animate={{ opacity: 1, rotate: 0 }}
-					exit={{ opacity: 0, rotate: -90 }}
-					transition={{ duration: 0.2 }}
-					onClick={() => setIsOpen(true)}
-				>
-					<Menu />
-				</motion.div>
-			)}
-		</AnimatePresence>
+		<SideModal
+			open={isOpen}
+			onOpenChange={setIsOpen}
+			triggerClassName="md:hidden"
+		>
+			<ul className="flex flex-col gap-4 items-center  h-full  text-xl px-4">
+				{menuList.map((item) => (
+					<li
+						key={item.link}
+						className="hover:bg-secondary w-full text-center hover:text-tertiary"
+					>
+						<Link href={item.link}>{item.name}</Link>
+					</li>
+				))}
+			</ul>
+		</SideModal>
 	);
 };
 

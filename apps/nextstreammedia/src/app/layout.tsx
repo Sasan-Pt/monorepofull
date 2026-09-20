@@ -26,7 +26,7 @@ export default function RootLayout({
 			className={`${figtree.variable} h-full`}
 			suppressHydrationWarning
 		>
-			<body className="grid grid-cols-[4%_1fr_4%]">
+			<body className="grid grid-cols-[1%_1fr_1%] mt-2">
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
