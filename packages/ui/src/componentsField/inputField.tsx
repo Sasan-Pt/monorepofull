@@ -27,7 +27,7 @@ const InputField = (props: ShadInputProps): React.ReactElement => {
 		<Field data-invalid={!!error}>
 			{label && <FieldLabel htmlFor={inputId}>{label}</FieldLabel>}
 
-			<div className={clsx("items-center relative flex", wrapperClassName)}>
+			<div className={clsx("items-center relative flex ", wrapperClassName)}>
 				{icon && icon}
 
 				<Input

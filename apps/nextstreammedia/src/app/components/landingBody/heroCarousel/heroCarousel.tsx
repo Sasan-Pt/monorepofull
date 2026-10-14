@@ -1,5 +1,5 @@
+import images from "E:/asp.net/repos/images/cyberpunk.jpg";
 import SharedCarousel from "@repo/ui/components/sharedCarousel";
-import images from "../../../../../public/assets/images/0ukyqr03lm6c1.png";
 import CarouselMap from "./carouselMap";
 import MediaInfo from "./mediaInfo";
 

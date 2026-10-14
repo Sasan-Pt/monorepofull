@@ -52,6 +52,14 @@ export interface SheetContentProps {
 	children: React.ReactNode;
 	title?: string;
 	description?: string;
+	triggerClassName?: string;
 	open: boolean;
 	onOpenChange: () => void;
+}
+
+export interface SharedCarouselProps {
+	children?: React.ReactNode;
+	styleButtonLeft?: string;
+	styleButtonRight?: string;
+	carouselStyle?: string;
 }

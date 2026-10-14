@@ -60,8 +60,10 @@
 	--primary: oklch(0.72 0.03 290.53 / 1); /*c0c1ff */
 	--secondary: oklch(0.83 0.09 283.63 / 1); /* #0EA5E9 */
 
-	--tertiary: oklch(0.67 0.18 58); /* #B95F00 */
+	--tertiary: oklch(0.34 0.23 266.8 / 1); /* #B95F00 */
 	--tertiary-foreground: oklch(0.98 0.01 58);
+
+	--input: oklch(0.24 0.04 266.76 / 1);
 
 	/* ===========================================
 	   Backgrounds
@@ -105,7 +107,6 @@
 	   Inputs
 	=========================================== */
 
-	--input: var(--surface);
 	--input-hover: var(--surface-hover);
 	--input-focus: var(--surface-active);
 
@@ -137,6 +138,7 @@
 }
 
 @theme {
+	--color-tertiary: var(--tertiary);
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
