@@ -4,6 +4,8 @@ import type { HeroCarouselProps } from "./types";
 
 const MediaImages = (props: HeroCarouselProps) => {
 	const { images } = props;
+
+	console.log("images", images);
 	return (
 		<>
 			{images.map((image) => {
