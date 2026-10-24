@@ -12,6 +12,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.1",
+		"orval": "^8.44.0",
 		"turbo": "^2.10.0",
 		"typescript": "5.9.2"
 	},
