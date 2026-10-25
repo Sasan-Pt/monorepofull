@@ -1,15 +1,8 @@
 // lib/media.ts
 import "server-only";
+import type { CarouselDto } from "@repo/api/models";
 
-export type HeroSlideData = {
-	id: string;
-	title: string;
-	description: string;
-	bannerUrl: string;
-	href: string;
-};
-
-export async function getFeaturedMedia(): Promise<HeroSlideData[]> {
+export async function getFeaturedMedia(): Promise<CarouselDto[]> {
 	const response = await fetch(
 		`http://localhost:5122/api/media/carousellanding`,
 		{
