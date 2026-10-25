@@ -14,5 +14,21 @@ export async function getFeaturedMedia(): Promise<CarouselDto[]> {
 		throw new Error("Failed to fetch featured media");
 	}
 
-	return response.json();
+	const media = (await response.json()) as CarouselDto[];
+
+	// In development, the API returns HTTPS asset URLs with a self-signed cert.
+	// Next's image optimizer fetches these server-side and rejects that cert.
+	// The API is also available over HTTP on port 5122, so use that origin for
+	// local assets and keep Next's optimizer enabled.
+	return media.map((item) => {
+		if (!item.bannerUrl) return item;
+
+		const bannerUrl = new URL(item.bannerUrl);
+		if (bannerUrl.hostname === "localhost" && bannerUrl.port === "7217") {
+			bannerUrl.protocol = "http:";
+			bannerUrl.port = "5122";
+		}
+
+		return { ...item, bannerUrl: bannerUrl.toString() };
+	});
 }
